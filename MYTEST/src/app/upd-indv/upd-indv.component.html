@@ -1,0 +1,22 @@
+<h1>UPDATE INDIVIUDAL</h1>
+
+<div *ngIf="indvInfo">
+    <fieldset class="form-group">
+        <label>ID</label>
+        <input type="text" [disabled]="true" [(ngModel)]="indvInfo.id" name="id">
+    </fieldset>
+    <fieldset class="form-group">
+        <label>NAME</label>
+        <input type="text" [(ngModel)]="indvInfo.name" name="name">
+    </fieldset>
+    <fieldset class="form-group">
+        <label>GENDER</label>
+        <input type="text" [(ngModel)]="indvInfo.gender" name="gender">
+    </fieldset>
+    <fieldset class="form-group">
+        <label>STATE</label>
+        <input type="text" [(ngModel)]="indvInfo.state" name="state">
+    </fieldset>
+
+    <button (click)="submit()">Save</button>
+</div>

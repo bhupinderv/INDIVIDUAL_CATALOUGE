@@ -1,0 +1,27 @@
+<html>
+<body>
+<h1>INDIVIDUAL DETAILS</h1>
+
+<table>
+    <tr>
+        <th  *ngFor="let column of headers">
+            {{column}}
+        </th>
+    </tr>
+    <tr *ngFor="let user of indvInfo">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.gender }}</td>
+        <td>{{ user.state }}</td>
+        <td>
+            <button (click)="updateIndv(user.id)">UPDATE</button>&nbsp;
+            <button (click)="deleteIndv(user.id)">DELETE</button>
+        </td>
+    </tr>
+</table>
+<br>
+<div>
+<button  (click)="addIndv()">ADD</button>
+</div>
+</body>
+</html>
